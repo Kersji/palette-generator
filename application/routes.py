@@ -4,7 +4,8 @@ from os import getenv
 
 @app.route('/', methods=['GET'])
 def home():
-    return render_template('index.html', title='Home', hostname=getenv('HOSTNAME'))
+    # return render_template('index.html', title='Home', hostname=getenv('HOSTNAME'))
+    return render_template('index.html', title='Home', hostname=getenv('BRANCH_NAME'))
 
 @app.route('/palette', methods=['GET','POST'])
 def get_palette():
