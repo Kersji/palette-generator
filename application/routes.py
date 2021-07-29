@@ -1,10 +1,12 @@
 from application import app, generate, db
 from flask import render_template, url_for, redirect, request
-from os import getenv
+from os import environ, getenv
 
 @app.route('/', methods=['GET'])
 def home():
-    return render_template('index.html', title='Home', hostname=getenv('HOSTNAME'))
+    # return render_template('index.html', title='Home', hostname=getenv('HOSTNAME'))
+    return render_template('index.html', title='Home', hostname=environ.HOSTNAME)
+
 
 @app.route('/palette', methods=['GET','POST'])
 def get_palette():
