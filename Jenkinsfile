@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        hostname = $HOSTNAME
+        hostname = ${HOSTNAME}
     }
     stages {
         stage('Install Dependencies') {
