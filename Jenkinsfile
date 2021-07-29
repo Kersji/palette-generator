@@ -7,7 +7,7 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                sh "bash scripts/installstage.sh"
-
+               sh "echo ${HOSTNAME}" 
             }
         }
         stage('Testing') {
