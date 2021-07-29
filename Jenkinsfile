@@ -21,10 +21,10 @@ pipeline {
             }
         }
     }
-    // post {
-    //     always {
-    //         cobertura coberturaReportFile: 'coverage.xml', failNoReports: false
-    //         junit 'junit/test-results.xml'
-    //     }
-    // }
+    post {
+        always {
+            cobertura coberturaReportFile: 'coverage.xml', failNoReports: false
+            junit 'junit/test-results.xml'
+        }
+    }
 }
