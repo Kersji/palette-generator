@@ -1,13 +1,12 @@
 pipeline {
     agent any
-    environment {
-        HOSTNAME = "${BUILD_TAG}"
-    }
+    // environment {
+    //     HOSTNAME = "${BUILD_TAG}"
+    // }
     stages {
         stage('Install Dependencies') {
             steps {
-               sh "bash scripts/installstage.sh"
-               sh "echo ${HOSTNAME}" 
+               sh "bash scripts/installstage.sh" 
             }
         }
         stage('Testing') {
